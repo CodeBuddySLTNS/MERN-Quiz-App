@@ -11,7 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 4500;
 const MONGO_URI = process.env.MONGO_URI;
 
-const whitelist = ['http://localhost:5173', 'https://bytequiz.onrender.com']
+const whitelist = ['http://localhost:5173', 'https://bytequiz-3nse.onrender.com', 'https://bytequiz.onrender.com']
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1 || !origin) {
