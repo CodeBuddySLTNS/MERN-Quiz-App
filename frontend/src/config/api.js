@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:4500';
+const baseUrl = 'https://quizapp-server-1lru.onrender.com';
 
 export const APIs = {
   baseUrl: baseUrl,
