@@ -3,6 +3,8 @@ import Axios from 'axios';
 import { AppContext } from '../App';
 import { BiSolidErrorCircle } from "react-icons/bi";
 import { BiTargetLock } from "react-icons/bi";
+import { APIs } from '../config/api';
+
 
 const NewPlayer = () => {
   const { setIsLoAding, setPlayerPoints, setPlayerName } = useContext(AppContext);
@@ -18,7 +20,7 @@ const NewPlayer = () => {
     
     setIsAvailable({status: false, checking: true});
     
-    const response = await Axios.get(`http://localhost:4500/api/createNewPlayer?player=${inputRef.current.value.trim()}`);
+    const response = await Axios.get(`${APIs.baseUrl}/api/createNewPlayer?player=${inputRef.current.value.trim()}`);
     
     if(response.data.response == "unavailable"){
       return setIsAvailable({status: true, checking: false});
