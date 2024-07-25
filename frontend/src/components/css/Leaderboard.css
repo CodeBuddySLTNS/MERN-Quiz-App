@@ -1,0 +1,168 @@
+.leaderboardContainer{
+  display: grid;
+  grid-template-rows: 135px 1fr;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.15);
+  overflow: auto;
+}
+
+.leaderboardSubCon{
+  width: 100%;
+  height: 100%;
+  padding: 0 0 1rem;
+  position: relative;
+}
+
+.leaderboard{
+  width: 90%;
+  height: minmax(100%,20rem);
+  padding: 0 0 1rem;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: gold;
+  position: relative;
+}
+
+.leaderboard .leadImage{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-55%);
+}
+
+.leaderboard .leadImage img{
+  width: 100%;
+  aspect-ratio: 1/0.23;
+}
+
+.leaderboard .leaderboardContents{
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.8rem 0.8rem 0.5rem;
+  background: #f0f0f0;
+}
+
+.leaderboardContents h1{
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: 'Changa One';
+  text-align: center;
+  padding: 0 0 5px;
+}
+
+.fetchingLeaderboard{
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.fetchingLeaderboard img{
+  width: 40px;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+}
+
+.fetchingLeaderboard p{
+  font-size: 0.7rem;
+}
+
+
+.leaderboardContents .playersRank{
+  width: 100%;
+  min-height: 10rem;
+  max-height: 17rem;;
+  padding: 4.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: auto;
+}
+
+.rankColums{
+  font-size: 0.9rem;
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rankColums li{
+  font-family: 'Luckiest Guy';
+}
+
+.playersRank .rank{
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: #fafafa;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.rankPlayerName{
+  width: 100%;
+  display: grid;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.rankPlayerName p, .rankPlayerName span{
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.rankPoints{
+  text-align: right;
+}
+
+.rankStats{
+  font-size: 0.8rem;
+  margin-top: 3px;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1.8fr 1fr;
+}
+
+.rankStats p{
+  display: flex;
+  justify-content: space-between;
+  border-radius: 2px;
+  padding: 0.4rem 0.3rem;
+}
+
+.rankStats .rankAccuracy{
+  padding: 0.4rem 0.5rem 0.4rem 0.3rem;
+  background: gold;
+}
+
+.rankStats .rankQuizzes{
+  color: #f0f0f0;
+  background: brown;
+}
+
+.rankTip{
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 0.5rem 0 0;
+}
+
+.rankTip span{
+  font-weight: 600;
+}
+
+.backToHome{
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0 0;
+}
+
+.leaderboard .leaderboardHomeBtn{
+  font-size: 1.4rem;
+  padding: 0.26rem 1.5rem 0.21rem;
+  border-radius: 3px;
+  background: lightgreen;
+}

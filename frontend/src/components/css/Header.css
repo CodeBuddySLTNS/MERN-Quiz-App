@@ -1,0 +1,109 @@
+.Header{
+  width: 100%;
+  padding: 0.5rem 0.8rem 0.8rem 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.user{
+  position: relative;
+}
+
+.userLevel{
+  width: 80px;
+  aspect-ratio: 1/1;
+  position: relative;
+  z-index: 9;
+}
+
+.userLevel img{
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.userLevelValue{
+  width: 72%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: cyan;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 9;
+  transform: translateY(-52%);
+}
+
+.userInfo{
+  width: 10rem;
+  height: 55px;
+  position: absolute;
+  top: 50%;
+  left: 39px;
+  z-index: 8;
+  transform: translateY(-50%);
+}
+
+.userInfo img{
+  width: 100%;
+  height: 100%;
+}
+
+.userInfoValue{
+  width: 100%;
+  padding: 0 0.7rem 0 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.userName{
+  white-space: nowrap;
+  font-weight: 400;
+  font-family: 'Luckiest Guy';
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border-bottom: 1px solid gray;
+}
+
+.userPoints{
+  font-size: 0.95rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.leaderboardBtnContainer{
+  min-width: 45px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.leaderboardBtn{
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 10;
+  transform: translateY(-50%);  background: url("../../assets/e70bcc65284623.5aef51b58b0c9.gif");
+  background-size: cover;
+  background-position: center;
+}
+
