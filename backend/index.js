@@ -11,11 +11,22 @@ const app = express();
 const PORT = process.env.PORT || 4500;
 const MONGO_URI = process.env.MONGO_URI;
 
+const whitelist = ['http://localhost:5173', 'https://bytequiz.onrender.com']
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+
 app.use((req, res, next) => {
   console.log(req.url)
   next();
 })
-app.use(cors());
+app.use(cors(corsOptions));
 app.use('/api', router);
 app.use('/api', questions);
 
